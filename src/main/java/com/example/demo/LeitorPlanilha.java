@@ -91,7 +91,9 @@ public class LeitorPlanilha {
                         {
                         
                            // System.out.println(lote2.get(itemAuxiliar).getDescricao());
-                            lote2.get(itemAuxiliar).setDescricao(lote2.get(itemAuxiliar).getDescricao() + ", "+ item.getDescricao());
+                           if (!(lote2.get(itemAuxiliar).getDescricao().contains(item.getDescricao()))) {
+                              lote2.get(itemAuxiliar).setDescricao(lote2.get(itemAuxiliar).getDescricao() + ", "+ item.getDescricao());
+                           }
                         } 
                     }
                     else {
